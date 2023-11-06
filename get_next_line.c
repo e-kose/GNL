@@ -53,13 +53,13 @@ char	*ft_polish(char *line)
 	cleaned = ft_substr(line, i + 1, ft_strlen(line) - i);
 	if (cleaned == NULL)
 		return (NULL);
-	line[i + 1] = '\0';
 	if (cleaned[0] == '\0')
 	{
 		free(cleaned);
 		cleaned = NULL;
 		return (NULL);
 	}
+	line[i + 1] = '\0';
 	return (cleaned);
 }
 
